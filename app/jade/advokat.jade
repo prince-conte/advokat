@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+    head
+        include include/head.jade
+    body
+        .topbar
+            .topbar_title <i></i> Адвокатская палата Смоленской Области
+        .wrap.wrap_inner
+            header.title
+                .content
+                    .middle
+                        span.ad-title Адвокаты Россенко
+            section.navigate
+                .content
+                    nav
+                        ul
+                            li: <a href="#">Главная</a>
+                            li: <a href="#">Адвокаты <i></i></a>
+                                .nav__sub
+                                    .phbg
+                                        .nav__sub_body
+                                            a Алла Владимировна <br> Россенко
+                                            a Владимир <br> Константинович Россенко
+                                            a Людмила Львовна <br> Россенко
+                            li: <a href="#">Категории дел</a>
+                            li: <a href="#">Цены</a>
+                            li.last: <a href="#">Контакты</a>
+                            li.tel: <a class="nav_tel" href="#">Обратная связь</a>
+            include include/about-section.jade
+                            
+                
