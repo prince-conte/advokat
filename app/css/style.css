@@ -1880,4 +1880,10 @@ footer .it-grade a:hover {
   footer .footer__linked .footer__linked__links .inp-txt {
     display: none;
   }
+  .wrap_inner {
+    float: left;
+    width: 100%;
+    position: relative;
+    top: 0px;
+  }
 }
