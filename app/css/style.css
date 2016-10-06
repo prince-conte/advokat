@@ -62,7 +62,7 @@ select {
   background-size: contain !important;
 }
 .bgCC {
-  background-position: CENTER CENTER;
+  background-position: CENTER CENTER !important;
   background-repeat: no-repeat !important;
   background-size: COVER !important;
 }
@@ -422,6 +422,23 @@ h4 {
 h6 {
   font-size: 13px;
 }
+@keyframes timer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.timer {
+  animation: timer 0.5s linear 00s 1 alternate forwards;
+}
+.timer2 {
+  animation: timer 0.5s linear 0.5s 1 alternate forwards;
+}
+.timer3 {
+  animation: timer 0.5s linear 1s 1 alternate forwards;
+}
 .spisok {
   float: left;
   width: 100%;
@@ -443,6 +460,20 @@ h6 {
   width: 6px;
   height: 6px;
   background: #46688b;
+}
+.paginator {
+  float: left;
+  width: 100%;
+}
+.paginator a {
+  display: inline-block;
+  font-size: 16px;
+  color: #92acc4;
+  margin-right: 10px;
+}
+.paginator .active {
+  padding: 3 1px;
+  border-bottom: solid 1px #92acc4;
 }
 .button-block {
   float: left;
@@ -489,6 +520,10 @@ p {
   font-size: 19px;
   float: left;
   width: 100%;
+}
+p a {
+  font-weight: 700;
+  color: #1055b2;
 }
 .content {
   width: 1180px;
@@ -573,12 +608,12 @@ header .header__slider {
 }
 header .header__slider__item {
   position: absolute;
-  display: block;
+  display: none;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  background-position: CENTER CENTER;
+  background-position: CENTER CENTER !important;
   background-repeat: no-repeat !important;
   background-size: COVER !important;
   text-align: center;
@@ -616,6 +651,9 @@ header .header__slider__item .header__slider__item_name span {
   display: inline-block;
   margin: 0 30px;
   font-size: 30px;
+}
+header #slide1 {
+  display: none;
 }
 header .arrow {
   position: absolute;
@@ -681,6 +719,9 @@ header .dots a {
 header .dots .active {
   opacity: 0.95;
 }
+#out1 {
+  display: none;
+}
 .title {
   float: left;
   width: 100%;
@@ -708,6 +749,7 @@ header .dots .active {
   width: 100%;
   top: 0px;
   float: left;
+  z-index: 9999999999;
 }
 nav {
   position: absolute;
@@ -769,6 +811,7 @@ nav ul li .nav__sub {
   height: 200px;
   left: 0px;
   bottom: -200px;
+  z-index: 9999999999;
 }
 nav ul li .nav__sub .phbg {
   position: absolute;
@@ -799,6 +842,13 @@ nav ul .tel {
   float: right;
   background: transparent !important;
 }
+nav ul .tel:hover {
+  float: right;
+  background: transparent !important;
+}
+nav ul .tel:hover a {
+  color: #15202f;
+}
 nav ul li::before {
   content: '';
   position: absolute;
@@ -821,6 +871,44 @@ nav ul li:hover .nav__sub {
 nav ul .last::before {
   display: none;
 }
+nav ul li.mobile {
+  float: left;
+  width: 35px;
+  height: 35px;
+  display: none;
+  border: solid 2px #fff;
+  position: relative;
+  top: 8px;
+}
+nav ul li.mobile span {
+  width: 67%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 5px;
+}
+nav ul li.mobile span::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 7px;
+  left: 0px;
+  background: #fff;
+}
+nav ul li.mobile span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 14px;
+  left: 0px;
+  background: #fff;
+}
 .faces .content {
   margin-top: 50px;
 }
@@ -834,6 +922,7 @@ nav ul .last::before {
   width: 33.3333333%;
   padding-left: 10px;
   padding-right: 10px;
+  opacity: 0;
 }
 .faces .faces__display .faces__display__item .faces__display__item_body {
   float: left;
@@ -946,6 +1035,7 @@ nav ul .last::before {
   background: #c2cedc;
   float: left;
   width: 100%;
+  opacity: 0;
 }
 .home-txt h2 {
   margin-bottom: 17px;
@@ -959,7 +1049,7 @@ nav ul .last::before {
   width: 100%;
 }
 .txt_bg {
-  background-position: CENTER CENTER;
+  background-position: CENTER CENTER !important;
   background-repeat: no-repeat !important;
   background-size: COVER !important;
   padding-bottom: 45px;
@@ -981,6 +1071,7 @@ nav ul .last::before {
   display: inline-block;
   width: 33.333333%;
   min-height: 345px;
+  opacity: 0;
 }
 .advantages .advantages__disp__item_img {
   float: left;
@@ -1019,6 +1110,7 @@ aside .aside__sub-menu .aside__sub-menu__title-about_line {
   width: 100%;
   text-align: center;
   margin: 14px 0 18px;
+  margin-top: 10px;
 }
 aside .aside__sub-menu .aside__sub-menu__title-about_line span {
   text-transform: uppercase;
@@ -1046,6 +1138,9 @@ aside .aside__sub-menu .aside__sub-menu__title-about_linked a {
 aside .aside__sub-menu .aside__sub-menu__title-about_linked a:first-child {
   border-top: solid 1px #d5dade;
 }
+aside .aside__sub-menu .aside__sub-menu__title-about_linked a:last-child {
+  border-bottom: solid 1px #d5dade;
+}
 aside .aside__sub-menu .aside__sub-menu__title-about_linked a.active {
   background: #c9a87d;
   font-weight: 700;
@@ -1065,6 +1160,69 @@ aside .aside__teeser img {
   display: block;
   width: auto;
   margin: 0 auto;
+}
+.floating-content {
+  float: left;
+  width: 880px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 18px;
+  display: inline-block;
+}
+.floating-content h2 {
+  text-align: left;
+}
+.floating-content .float-content__profile {
+  float: left;
+  width: 100%;
+  height: 375px;
+  margin-bottom: 55px;
+}
+.floating-content .float-content__profile .float-content__profile_image {
+  float: left;
+  width: 350px;
+  height: 100%;
+  background-position: top CENTER !important;
+  background-repeat: no-repeat !important;
+  background-size: COVER !important;
+}
+.floating-content .float-content__profile .float-content__profile_info {
+  float: left;
+  width: 350px;
+  height: 100%;
+  background-position: top CENTER !important;
+  background-repeat: no-repeat !important;
+  background-size: COVER !important;
+  padding-left: 20px;
+}
+.floating-content .float-content__profile .float-content__profile_info ul {
+  margin-bottom: 25px;
+}
+.floating-content .float-content__profile .float-content__profile_info .float-content__profile_info_phone {
+  font-size: 20px;
+  font-family: 'Conv_heuristicaregular', sans-serif;
+  text-align: left;
+  float: left;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+.floating-content .float-content__profile .float-content__profile_info .float-content__profile_info_phone .vi {
+  display: inline-block;
+  margin-left: 15px;
+  width: 50px;
+  height: 24px;
+  background-position: CENTER CENTER !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background: url(../img/phv.svg);
+  position: relative;
+  top: 5px;
+}
+.floating-content .faces__display__item_title-about_t-s {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 footer {
   margin-top: 45px;
@@ -1167,4 +1325,559 @@ footer .it-grade a {
 }
 footer .it-grade a:hover {
   color: #e6be88;
+}
+.mobile {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-position: CENTER CENTER !important;
+  background-repeat: no-repeat !important;
+  background-size: COVER !important;
+  background: url(../img/sl.jpg);
+}
+.mobile .menu {
+  display: block;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  float: left;
+}
+.mobile .menu a {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #e6be88;
+  padding: 6px 0;
+}
+.mobile .menu .close {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border: solid 2px #fff;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  margin-left: -16px;
+  margin-bottom: 15px;
+}
+.mobile .menu .close span {
+  width: 67%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  top: 14px;
+  left: 6px;
+  -moz-transform: rotate(45deg);
+  /* Для Firefox */
+  -ms-transform: rotate(45deg);
+  /* Для IE */
+  -webkit-transform: rotate(45deg);
+  /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(45deg);
+  /* Для Opera */
+  transform: rotate(45deg);
+}
+.mobile .menu .close span::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  -moz-transform: rotate(-90deg);
+  /* Для Firefox */
+  -ms-transform: rotate(-90deg);
+  /* Для IE */
+  -webkit-transform: rotate(-90deg);
+  /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(-90deg);
+  /* Для Opera */
+  transform: rotate(-90deg);
+}
+@media screen and (min-width: 980px) and (max-width: 1200px) {
+  .content {
+    width: 100%;
+    padding: 0 25px;
+  }
+  nav {
+    top: 15px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  header .header__slider__item h1 span {
+    font-size: 100px;
+    padding: 0 25px;
+  }
+  header .header__slider__item .header__slider__item_name span {
+    margin: 0 30px;
+    font-size: 17px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_name {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_desc {
+    font-size: 14px;
+  }
+  .spisok li {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 0;
+    padding-left: 17px;
+  }
+  .home-txt p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  footer .footer__copy p {
+    font-size: 14px;
+  }
+  footer .it-grade a {
+    font-size: 14px;
+  }
+  aside {
+    display: none;
+  }
+  .floating-content {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .content {
+    width: 100%;
+    padding: 0 25px;
+  }
+  .topbar .topbar_title {
+    font-size: 23px;
+  }
+  .title .ad-title {
+    font-size: 75px;
+  }
+  nav {
+    top: 15px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  header .header__slider__item img {
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+  }
+  header .header__slider__item h1 span {
+    font-size: 100px;
+    padding: 0 25px;
+  }
+  header .header__slider__item .header__slider__item_name span {
+    margin: 0 30px;
+    font-size: 17px;
+  }
+  .faces .faces__display .faces__display__item {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_name {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_desc {
+    font-size: 14px;
+  }
+  .advantages .advantages__disp__item {
+    width: 50%;
+    min-height: 345px;
+    margin-bottom: 25px;
+  }
+  .spisok li {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 0;
+    padding-left: 17px;
+  }
+  .home-txt p {
+    font-size: 14px;
+  }
+  .floating-content .float-content__profile .float-content__profile_image {
+    width: 305px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  footer {
+    margin-top: 45px;
+    height: 130px;
+  }
+  footer .footer__copy {
+    width: 20%;
+    height: 50%;
+  }
+  footer .footer__linked {
+    width: 50%;
+    height: 50%;
+    float: right;
+  }
+  footer .it-grade {
+    float: left;
+    width: 100%;
+    height: 50%;
+    display: inline-table;
+  }
+  footer .footer__copy p {
+    font-size: 14px;
+  }
+  footer .it-grade a {
+    font-size: 14px;
+    float: left;
+  }
+  aside {
+    display: none;
+  }
+  .floating-content {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .content {
+    width: 100%;
+    padding: 0 25px;
+  }
+  .topbar .topbar_title {
+    font-size: 16px;
+    padding: 18px 10px 10px;
+  }
+  .title .ad-title {
+    font-size: 75px;
+  }
+  nav {
+    top: 15px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  header .header__slider__item img {
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+  }
+  header .header__slider__item h1 span {
+    font-size: 75px;
+    padding: 0 25px;
+  }
+  header .header__slider__item .header__slider__item_name span {
+    margin: 0 30px;
+    font-size: 14px;
+  }
+  .faces .faces__display .faces__display__item {
+    float: left;
+    width: 100%;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_name {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_desc {
+    font-size: 14px;
+  }
+  .advantages .advantages__disp__item {
+    width: 100%;
+    min-height: 345px;
+    margin-bottom: 25px;
+  }
+  .spisok li {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 0;
+    padding-left: 17px;
+  }
+  .home-txt p {
+    font-size: 14px;
+  }
+  .floating-content .float-content__profile .float-content__profile_image {
+    width: 100%;
+    height: 450px;
+  }
+  .floating-content .float-content__profile .float-content__profile_info {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+  }
+  .floating-content .float-content__profile {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 55px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  footer {
+    margin-top: 45px;
+    height: auto;
+  }
+  footer .footer__copy {
+    width: 100%;
+    height: 40px;
+    float: left;
+  }
+  footer .footer__linked {
+    width: 100%;
+    height: 70px;
+    float: left;
+  }
+  footer .it-grade {
+    width: 100%;
+    height: 40px;
+    float: left;
+  }
+  footer .footer__copy p {
+    font-size: 14px;
+  }
+  footer .it-grade a {
+    font-size: 14px;
+    float: left;
+  }
+  aside {
+    display: none;
+  }
+  .floating-content {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+  }
+  nav ul li {
+    display: none;
+  }
+  .tel {
+    display: block;
+  }
+  li.mobile {
+    display: inline-block !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  header {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 480px;
+    top: 0px;
+    left: 0px;
+  }
+  .wrap {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    min-height: 500px;
+    top: 480px;
+  }
+  .topbar .topbar_title i {
+    display: inline-block;
+    float: left;
+    height: 37px;
+    width: 33px;
+    background-position: CENTER CENTER !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background: url(../img/rf.png);
+    position: relative;
+    top: 7px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  .topbar .topbar_title span {
+    display: inline-block;
+    float: left;
+    height: 37px;
+    width: 235px;
+    position: relative;
+    top: 10px;
+  }
+  .content {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .topbar .topbar_title {
+    font-size: 16px;
+    padding: 18px 10px 10px;
+  }
+  .title .ad-title {
+    font-size: 45px;
+  }
+  .navigate nav ul {
+    padding: 0px;
+  }
+  .paginator a {
+    font-size: 12px;
+  }
+  nav {
+    top: 15px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  header .header__slider__item img {
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+  }
+  header .header__slider__item h1 span {
+    font-size: 38px;
+    padding: 0 25px;
+  }
+  header .header__slider__item h1 {
+    margin-top: 65px;
+  }
+  header .header__slider__item .header__slider__item_name span {
+    font-size: 14px;
+    display: block;
+    margin: 8px 0;
+  }
+  .floating-content .faces__display__item_title-about_t-s {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .faces .faces__display .faces__display__item {
+    float: left;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  article {
+    padding: 25px 10px;
+    border-radius: 15px;
+    background: #c2cedc;
+    float: left;
+    width: 100%;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_name {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_desc {
+    font-size: 14px;
+  }
+  .advantages .advantages__disp__item {
+    width: 100%;
+    min-height: 345px;
+    margin-bottom: 25px;
+  }
+  .spisok li {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 0;
+    padding-left: 17px;
+  }
+  .home-txt p {
+    font-size: 14px;
+  }
+  .floating-content .float-content__profile .float-content__profile_image {
+    width: 100%;
+    height: 450px;
+  }
+  .floating-content .float-content__profile .float-content__profile_info {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+  }
+  .floating-content .float-content__profile {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 55px;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_title-about .faces__display__item_title-about_line img {
+    display: inline-block;
+    position: relative;
+    width: 80%;
+  }
+  .faces .faces__display .faces__display__item .faces__display__item_body {
+    height: auto;
+    margin-bottom: 25px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  footer {
+    margin-top: 45px;
+    height: auto;
+  }
+  footer .footer__copy {
+    width: 100%;
+    height: 40px;
+    float: left;
+  }
+  footer .footer__linked {
+    width: 100%;
+    height: 70px;
+    float: left;
+  }
+  footer .it-grade {
+    width: 100%;
+    height: 40px;
+    float: left;
+  }
+  footer .footer__copy p {
+    font-size: 14px;
+  }
+  footer .it-grade a {
+    font-size: 14px;
+    float: left;
+  }
+  aside {
+    display: none;
+  }
+  .floating-content {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+  }
+  nav ul li {
+    display: none;
+  }
+  .tel {
+    display: block;
+  }
+  li.mobile {
+    display: inline-block !important;
+  }
+  footer .footer__linked .footer__linked__links .inp-txt {
+    display: none;
+  }
 }

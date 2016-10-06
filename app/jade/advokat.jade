@@ -4,8 +4,8 @@ html(lang="ru")
         include include/head.jade
     body
         .topbar
-            .topbar_title <i></i> Адвокатская палата Смоленской Области
-        .wrap.wrap_inner
+            .topbar_title <i></i> <span>Адвокатская палата Смоленской Области</span>
+        .wrap.wrap_inner(style="background-image:url(img/bg-in2.jpg)")
             header.title
                 .content
                     .middle
@@ -25,7 +25,19 @@ html(lang="ru")
                             li: <a href="#">Категории дел</a>
                             li: <a href="#">Цены</a>
                             li.last: <a href="#">Контакты</a>
+                            li.mobile
+                                span
                             li.tel: <a class="nav_tel" href="#">Обратная связь</a>
+            section.paginator
+                .content
+                    a.active Главная   
+                    a →   
+                    a.active Адвокаты   
+                    a →   
+                    a Россенко Владимир Константинович
+                
             include include/about-section.jade
+            include include/footer.jade
+            
                             
                 
